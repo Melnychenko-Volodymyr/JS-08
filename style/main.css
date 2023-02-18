@@ -1,0 +1,67 @@
+button:hover {
+	cursor: pointer;
+}
+.header {
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 600px;
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+}
+.label {
+    margin-top: 10px;
+}
+.inp {
+    margin-left: 20px;
+    width: 100px;
+}
+.div_select {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 100px;
+}
+.btn_add {
+    margin-left: 30px;
+}
+.btn_clear {
+    margin-left: 30px;
+}
+.container {
+    margin: 0 auto;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    margin-top: 30px;
+    width: 600px;
+    height: 110px;
+    display: flex; 
+    border-bottom: 1px solid black;   
+}
+.number {
+    width: 40px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.name {
+    width: 180px;
+    padding-top: 20px;
+    color:brown;
+    font-size: 20px;
+}
+.profession {
+    width: 170px;
+    padding-top: 20px;
+    color:blue;
+    font-size: 20px;
+}
+.picture {
+    width: 200px;
+
+}
+
+
+
