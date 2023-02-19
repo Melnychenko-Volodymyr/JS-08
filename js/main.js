@@ -19,6 +19,14 @@ const professionList = [
 let users = [];
 let btn = [];
 
+// Пошук користувача в масиві
+const findUser = (item) => {
+    for (let i=0; i<users.length; i++) {
+        if (item === users[i].name) return true;
+    }
+    return false;
+}
+
 // формування контейнера
 const render = () => {
     let contHTML = "";
@@ -42,7 +50,6 @@ const render = () => {
                 </div>
             </div>
             `;
-
     }
     cont.innerHTML = contHTML;
     for (let i=0; i<users.length; i++) {
@@ -54,7 +61,6 @@ const render = () => {
 // Видалення елемента
 const removeItem = (ev) => {
     let n = Number(ev.target.id.slice(3));
-    console.log(n);
     users.splice(n,1);
     render();
 };
@@ -72,13 +78,16 @@ let select = document.querySelector('.select');
 btn_add.addEventListener('click', () => {
     let userName = inp.value;
     if (!userName) return;
+    if (findUser(userName)) {
+        alert("Такий користувач вже існує !");
+        return;
+    }
     let selectNumber = Number(select.value.slice(4));
     let profession = professionList[selectNumber].profession;
     let picture = professionList[selectNumber].picture;
     users.push({name: userName, profession: profession, picture: picture});
     inp.value = "";
-    render();
-    
+    render();   
 });
 
 // повна очистка списка і контейнера
